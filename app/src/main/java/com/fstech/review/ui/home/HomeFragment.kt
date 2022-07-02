@@ -81,8 +81,6 @@ class HomeFragment : Fragment() {
                 Log.v("TAG", email.toString())
                 Log.v("TAG", secondName.toString())
 
-
-
             }
 
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
