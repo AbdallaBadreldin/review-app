@@ -1,4 +1,4 @@
-package com.Fstech.myapplication
+package com.fstech.review
 
 import org.junit.Test
 
