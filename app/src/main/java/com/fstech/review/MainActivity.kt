@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         database = Firebase.database.reference
 
-        val person = User("The", "Boss", "Boss@gmail.com", "", "student", 26)
-        database.child("users").push().setValue(person)
+//        val person = User("Theboss", "theBoss", "Boss2020@gmail.com", "", "student", 26)
+//        database.child("users").push().setValue(person)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
