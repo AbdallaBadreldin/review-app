@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "721622097976",
+    "project_id": "review-me-9ac9e",
+    "storage_bucket": "review-me-9ac9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721622097976:android:3bfd84273dbaffce4f06cd",
+        "android_client_info": {
+          "package_name": "com.Fstech.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721622097976-kdqf949r5tp3t0klsbsg57nuvteju9gm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs1NxuiVk4VIiLyc3JD2_xygLWnP1diQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721622097976-kdqf949r5tp3t0klsbsg57nuvteju9gm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721622097976:android:d1992047d9da66514f06cd",
+        "android_client_info": {
+          "package_name": "com.fstech.review"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721622097976-kdqf949r5tp3t0klsbsg57nuvteju9gm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs1NxuiVk4VIiLyc3JD2_xygLWnP1diQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721622097976-kdqf949r5tp3t0klsbsg57nuvteju9gm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
