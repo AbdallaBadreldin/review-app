@@ -1,5 +1,6 @@
 package com.fstech.review.ui.home
 
+
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,11 +9,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-
-
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.fstech.review.databinding.FragmentHomeBinding
 import com.fstech.review.model.User
-import com.fstech.review.model.UserResponse
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -29,22 +29,29 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var database: DatabaseReference
 
-    //    private var response: ArrayList<UserResponse> = ArrayList()
-    private var usersList: ArrayList<UserResponse> = ArrayList()
-
+    private var usersList: ArrayList<User> = ArrayList()
+    private lateinit var adapter: PersonAdapter
+    private lateinit var recycler: RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         database = Firebase.database.reference
-
-
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+
+        adapter = PersonAdapter(mList = usersList)
+        recycler = binding.usersList
+
+        adapter.also {
+            recycler.layoutManager = LinearLayoutManager(requireContext())
+            recycler.adapter = it }
+
 
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
@@ -68,19 +75,25 @@ class HomeFragment : Fragment() {
             // TODO: implement the ChildEventListener methods as documented above
             // ...
             override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
+                val userId= snapshot.key
                 val firstName = snapshot.child("firstName").value
                 val position = snapshot.child("position").value
                 val profileImage = snapshot.child("profileImage").value
                 val age = snapshot.child("age").value
                 val email = snapshot.child("email").value
                 val secondName = snapshot.child("secondName").value
-                Log.v("TAG", firstName.toString())
-                Log.v("TAG", position.toString())
-                Log.v("TAG", profileImage.toString())
-                Log.v("TAG", age.toString())
-                Log.v("TAG", email.toString())
-                Log.v("TAG", secondName.toString())
 
+                val user = User(
+                    userId =userId ,
+                    firstName = firstName as String,
+                    position = position as String,
+                    profileImage = profileImage as String,
+                    age = age as Long,
+                    email = email as String,
+                    secondName = secondName as String
+                )
+                usersList.add(user)
+                adapter.update(usersList)
             }
 
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
