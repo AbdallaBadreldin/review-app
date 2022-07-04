@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.fstech.review.R
 import com.fstech.review.databinding.FragmentHomeBinding
 import com.fstech.review.model.User
 import com.google.firebase.database.ChildEventListener
@@ -54,9 +55,9 @@ class HomeFragment : Fragment() {
 
 
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+
+            textView.text = getString(R.string.select_person_to_give_feedback)
+
         return root
     }
 
