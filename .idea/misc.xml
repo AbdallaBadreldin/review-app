@@ -3,11 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AFITI/review-app/app/src/main/res/layout/activity_review.xml" value="0.1" />
-        <entry key="..\:/AFITI/review-app/app/src/main/res/layout/content_review.xml" value="0.25935828877005346" />
         <entry key="..\:/TheBoss/AFITI/review-app/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/TheBoss/AFITI/review-app/app/src/main/res/layout/activity_review.xml" value="0.33" />
-        <entry key="..\:/TheBoss/AFITI/review-app/app/src/main/res/layout/content_review.xml" value="0.18802083333333333" />
+        <entry key="..\:/TheBoss/AFITI/review-app/app/src/main/res/layout/content_review.xml" value="0.25" />
         <entry key="..\:/TheBoss/AFITI/review-app/app/src/main/res/layout/fragment_dashboard.xml" value="0.358695652173913" />
         <entry key="..\:/TheBoss/AFITI/review-app/app/src/main/res/layout/fragment_first.xml" value="0.18802083333333333" />
         <entry key="..\:/TheBoss/AFITI/review-app/app/src/main/res/layout/fragment_home.xml" value="0.22" />
