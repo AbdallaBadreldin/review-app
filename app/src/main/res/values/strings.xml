@@ -18,4 +18,5 @@
     <string name="write_cons_here">write cons here</string>
     <string name="pros">Pros</string>
     <string name="cons">Cons</string>
+    <string name="submited_review">Submitted review</string>
 </resources>
